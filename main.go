@@ -65,11 +65,11 @@ func main() {
 	fmt.Println(kory)
 	kory.age.Birthday()
 	fmt.Println(kory)
-	HardTimes(&kory) // can I get around having to dereference the pointer?
+	HardTimes(&kory) // Question: can I get around having to dereference the pointer?
 	fmt.Println(kory)
 
 	fernando := Developer{
-		Person{
+		Person{ // Question: Can i initialize Developer by just passing the requirements for Person?
 			33,
 			"Fernando",
 			"Sanchez",
