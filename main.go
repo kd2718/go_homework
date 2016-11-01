@@ -9,7 +9,7 @@ import "fmt"
 type Age int
 
 func (a *Age) Birthday() {
-	*a++
+	*a++ // Question: Is this the "proper" way to do an operations like this?
 }
 
 type Person struct {
@@ -65,10 +65,10 @@ func main() {
 	fmt.Println(kory)
 	kory.age.Birthday()
 	fmt.Println(kory)
-	HardTimes(&kory)
+	HardTimes(&kory) // can I get around having to dereference the pointer?
 	fmt.Println(kory)
 
-	fernando := &Developer{
+	fernando := Developer{
 		Person{
 			33,
 			"Fernando",
@@ -80,6 +80,6 @@ func main() {
 	fmt.Println(fernando)
 	fernando.Birthday()
 	fmt.Println(fernando)
-	HardTimes(fernando)
+	HardTimes(&fernando)
 	fmt.Println(fernando)
 }
